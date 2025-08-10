@@ -314,7 +314,7 @@ export function Hero({ person, hero }: { person: Person; hero: HeroData }) {
 								: { duration: 0.6, ease: "easeOut", delay: 0.1 }
 						}
 						className="relative">
-						{/* Desktop view - always visible code window with enhanced styling */}
+						{/* Desktop view - always visible code window with new styling */}
 						<div className="hidden md:block">
 							<div className="flex items-center justify-between mb-2">
 								<h3 className="font-mono text-sm text-muted-foreground flex items-center gap-2">
@@ -336,34 +336,121 @@ export function Hero({ person, hero }: { person: Person; hero: HeroData }) {
 									ease: [0.22, 1, 0.36, 1],
 								}}
 								className="shadow-lg dark:shadow-emerald-900/20">
-								<CodeWindow title="portfolio" subtitle="code">
-									<pre className="text-xs sm:text-sm leading-relaxed">
-										<code>
-											{`const developer = {
-  name: "${person.name}",
-  role: "Full-stack Developer",
-  location: "${person.location}",
-  strengths: ["Design systems", "Responsive UI", "Type-safe APIs"],
-  skills: ["Next.js", "NestJS", "TypeScript", "Tailwind", "shadcn/ui", "Docker"],
-}
-
-function craft(ui) {
-  return ui
-    .withAnimations("framer-motion")
-    .using(["Next.js", "Tailwind", "shadcn/ui"])
-    .deploy("Vercel")
-}`}
-										</code>
-									</pre>
-									<div className="mt-4 flex items-center justify-start gap-2 text-emerald-600 dark:text-emerald-400">
-										<Terminal className="h-4 w-4" />
-										{"$"} {"npm run ship:production"}
+								{/* Terminal-style code window */}
+								<div className="bg-slate-900 rounded-lg border border-slate-700 overflow-hidden">
+									{/* Terminal header */}
+									<div className="flex items-center justify-between px-4 py-2 bg-slate-800 border-b border-slate-700">
+										<div className="flex items-center gap-2">
+											<div className="flex gap-1.5">
+												<div className="w-3 h-3 rounded-full bg-red-500"></div>
+												<div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+												<div className="w-3 h-3 rounded-full bg-green-500"></div>
+											</div>
+											<span className="text-slate-400 text-sm ml-2">
+												developer.js
+											</span>
+										</div>
 									</div>
-								</CodeWindow>
+									{/* Code content */}
+									<div className="p-4 font-mono text-sm">
+										<pre className="text-slate-300 leading-relaxed">
+											<code>
+												<span className="text-purple-400">
+													const
+												</span>{" "}
+												<span className="text-blue-300">
+													developer
+												</span>{" "}
+												<span className="text-white">
+													=
+												</span>{" "}
+												<span className="text-yellow-300">
+													{"{"}
+												</span>
+												<br />
+												{"  "}
+												<span className="text-emerald-400">
+													name
+												</span>
+												<span className="text-white">
+													:
+												</span>{" "}
+												<span className="text-orange-300">
+													"{person.name}"
+												</span>
+												<span className="text-white">
+													,
+												</span>
+												<br />
+												{"  "}
+												<span className="text-emerald-400">
+													role
+												</span>
+												<span className="text-white">
+													:
+												</span>{" "}
+												<span className="text-orange-300">
+													"Full Stack Developer"
+												</span>
+												<span className="text-white">
+													,
+												</span>
+												<br />
+												{"  "}
+												<span className="text-emerald-400">
+													location
+												</span>
+												<span className="text-white">
+													:
+												</span>{" "}
+												<span className="text-orange-300">
+													"{person.location}"
+												</span>
+												<span className="text-white">
+													,
+												</span>
+												<br />
+												{"  "}
+												<span className="text-emerald-400">
+													contact
+												</span>
+												<span className="text-white">
+													:
+												</span>{" "}
+												<span className="text-orange-300">
+													"{person.email}"
+												</span>
+												<span className="text-white">
+													,
+												</span>
+												<br />
+												<br />
+												{"  "}
+												<span className="text-emerald-400">
+													avatar
+												</span>
+												<span className="text-white">
+													:
+												</span>{" "}
+												<span className="pl-2 inline-flex items-center align-middle">
+													<img
+														src="/me.jpeg"
+														alt={person.name}
+														className="w-16 h-16 rounded-full border border-emerald-400 shadow-sm object-cover"
+													/>
+												</span>
+												<br />
+												<span className="text-yellow-300">
+													{"}"}
+												</span>
+											</code>
+										</pre>
+									</div>
+								</div>
 							</motion.div>
 						</div>
 
-						{/* Mobile view - collapsible code window with enhanced styling */}
+						{/* Mobile view - collapsible code window with new styling */}
 						<div className="md:hidden">
 							<Collapsible open={open} onOpenChange={setOpen}>
 								<div className="flex items-center justify-between mb-2">
@@ -395,33 +482,120 @@ function craft(ui) {
 											: ""
 									}>
 									<div className="shadow-lg dark:shadow-emerald-900/20">
-										<CodeWindow
-											title="portfolio"
-											subtitle="code">
-											<pre className="text-xs leading-relaxed">
-												<code>
-													{`const developer = {
-  name: "${person.name}",
-  role: "Full-stack Developer",
-  location: "${person.location}",
-  strengths: ["Design systems", "Responsive UI"],
-  skills: ["Next.js", "TypeScript", "Tailwind"],
-}
-
-function craft(ui) {
-  return ui
-    .withAnimations("framer-motion")
-    .using("shadcn/ui")
-    .deploy("Vercel")
-}`}
-												</code>
-											</pre>
-											<div className="mt-3 flex items-center justify-center gap-2 text-emerald-600 dark:text-emerald-400">
-												<Terminal className="h-4 w-4" />
-												{"$"}{" "}
-												{"npm run ship:production"}
+										{/* Terminal-style code window for mobile */}
+										<div className="bg-slate-900 rounded-lg border border-slate-700 overflow-hidden">
+											{/* Terminal header */}
+											<div className="flex items-center justify-between px-3 py-2 bg-slate-800 border-b border-slate-700">
+												<div className="flex items-center gap-2">
+													<div className="flex gap-1">
+														<div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+														<div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+														<div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+													</div>
+													<span className="text-slate-400 text-xs ml-1">
+														developer.js
+													</span>
+												</div>
 											</div>
-										</CodeWindow>
+											{/* Code content */}
+											<div className="p-3 font-mono text-xs">
+												<pre className="text-slate-300 leading-relaxed">
+													<code>
+														<span className="text-purple-400">
+															const
+														</span>{" "}
+														<span className="text-blue-300">
+															developer
+														</span>{" "}
+														<span className="text-white">
+															=
+														</span>{" "}
+														<span className="text-yellow-300">
+															{"{"}
+														</span>
+														<br />
+														{"  "}
+														<span className="text-emerald-400">
+															name
+														</span>
+														<span className="text-white">
+															:
+														</span>{" "}
+														<span className="text-orange-300">
+															"{person.name}"
+														</span>
+														<span className="text-white">
+															,
+														</span>
+														<br />
+														{"  "}
+														<span className="text-emerald-400">
+															role
+														</span>
+														<span className="text-white">
+															:
+														</span>{" "}
+														<span className="text-orange-300">
+															"Full Stack
+															Developer"
+														</span>
+														<span className="text-white">
+															,
+														</span>
+														<br />
+														{"  "}
+														<span className="text-emerald-400">
+															location
+														</span>
+														<span className="text-white">
+															:
+														</span>{" "}
+														<span className="text-orange-300">
+															"{person.location}"
+														</span>
+														<span className="text-white">
+															,
+														</span>
+														<br />
+														{"  "}
+														<span className="text-emerald-400">
+															contact
+														</span>
+														<span className="text-white">
+															:
+														</span>{" "}
+														<span className="text-orange-300">
+															"{person.email}"
+														</span>
+														<span className="text-white">
+															,
+														</span>
+														<br />
+														<br />
+														{"  "}
+														<span className="text-emerald-400">
+															avatar
+														</span>
+														<span className="text-white">
+															:
+														</span>{" "}
+														<div className="inline-flex items-center gap-1">
+															<img
+																src="/me.png"
+																alt={
+																	person.name
+																}
+																className="w-5 h-5 rounded-full border border-emerald-400"
+															/>
+														</div>
+														<br />
+														<span className="text-yellow-300">
+															{"}"}
+														</span>
+													</code>
+												</pre>
+											</div>
+										</div>
 									</div>
 								</CollapsibleContent>
 							</Collapsible>
