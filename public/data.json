@@ -1,0 +1,183 @@
+{
+  "brand": "SoumyaRaj",
+  "person": {
+    "name": "Soumya Raj Sarkar",
+    "phone": "+91-6290275911",
+    "email": "soumyaraj2003@gmail.com",
+    "linkedin": "https://linkedin.com/in/soumyaraj-sarkar",
+    "github": "https://github.com/Snaju003",
+    "location": "Kolkata, West Bengal, India"
+  },
+  "hero": {
+    "openTo": "Open to Internships & Freelance",
+    "headlinePrefix": "Hi, I'm",
+    "headlineSuffix": "— I build performant web apps.",
+    "summary": "Frontend-forward full‑stack developer focused on clean architecture, type‑safe APIs, and delightful UIs. I ship with Next.js, NestJS, and modern tooling."
+  },
+  "education": {
+    "school": "RCC Institute of Information Technology",
+    "degree": "B.Tech in Computer Science and Engineering",
+    "range": "Oct 2022 – Jun 2026"
+  },
+  "experiences": [
+    {
+      "company": "Infomaticae Technology Pvt. Ltd.",
+      "role": "Software Engineer Intern",
+      "location": "Remote",
+      "range": "Feb 2025 – May 2025",
+      "highlights": [
+        "Developed backend APIs using NestJS with Docker and TypeORM to boost scalability & maintainability.",
+        "Implemented comprehensive CRUD operations, improving data processing efficiency and automation.",
+        "Collaborated across teams to integrate backend services with frontend apps and third-party APIs."
+      ],
+      "stack": [
+        "NestJS",
+        "Docker",
+        "TypeORM",
+        "Node.js"
+      ]
+    },
+    {
+      "company": "BuyBox",
+      "role": "Frontend Developer (Freelance)",
+      "location": "Remote",
+      "range": "Feb 2025 – Present",
+      "highlights": [
+        "Shipped responsive, dynamic frontend with Next.js and Tailwind for modern UX and performance.",
+        "Implemented interactive patterns and components to increase engagement metrics.",
+        "Deployed and maintain live site serving active users at buybox1.co.za (uptime & smooth functionality)."
+      ],
+      "stack": [
+        "Next.js",
+        "Tailwind CSS",
+        "Vercel"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Innovision 2024 - Department Fest Website",
+      "subtitle": "Official CSE fest site: events, team registration, live updates",
+      "image": "/innovision.png",
+      "imageAlt": "Innovision festival web app screenshot",
+      "visible": true,
+      "points": [
+        "Built with Next.js and Supabase; responsive UI and dynamic data fetching.",
+        "Implemented events and teams sections for a smooth registration experience.",
+        "Focused on reliability and real-time content updates."
+      ],
+      "tech": [
+        "Next.js",
+        "Supabase",
+        "Tailwind",
+        "TypeScript"
+      ],
+      "links": {
+        "live": "https://innovision-2k24.vercel.app",
+        "github": "https://github.com/Snaju003/innovision-2024"
+      }
+    },
+    {
+      "title": "InterviewAI - AI-Powered Interview Practice",
+      "subtitle": "Mock interviews with real-time transcripts, AI feedback, and progress tracking",
+      "image": "/interviewai.png",
+      "imageAlt": "InterviewAI dashboard, question navigator, and live transcript UI",
+      "visible": true,
+      "points": [
+        "AI-generated mock interview questions and answers",
+        "Feedback analysis to improve responses",
+        "Secure authentication via Clerk",
+        "Recent interview history tracking"
+      ],
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind",
+        "Clerk",
+        "DrizzleORM",
+        "NeonDB"
+      ],
+      "links": {
+        "live": "https://interview-ai1.vercel.app/",
+        "github": "https://github.com/Snaju003/AI-Interview-Mocker"
+      }
+    },
+    {
+      "title": "RapidRevise - Last Minute Revision Web App",
+      "subtitle": "Smart revision platform with content curation and PDF summarization",
+      "image": "/rapidrevise.png",
+      "imageAlt": "RapidRevise dashboard screenshot",
+      "visible": false,
+      "points": [
+        "Backend infrastructure in Python with intelligent video curation by syllabus & time constraints.",
+        "PDF summarization extracts key concepts from study materials and textbooks.",
+        "Designed for speed and clarity during exam prep."
+      ],
+      "tech": [
+        "React",
+        "TailwindCSS",
+        "Python",
+        "AppWrite",
+        "GrokAI"
+      ],
+      "links": {
+        "github": "https://github.com/Snaju003/rapidrevise"
+      }
+    }
+  ],
+  "skills": [
+    {
+      "title": "Programming Languages",
+      "caption": "Strong typed & scripting foundations",
+      "items": [
+        "Java",
+        "JavaScript",
+        "TypeScript"
+      ]
+    },
+    {
+      "title": "Frontend",
+      "caption": "Interactive UIs & DX",
+      "items": [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "shadcn/ui"
+      ]
+    },
+    {
+      "title": "Backend",
+      "caption": "APIs, servers, orchestration",
+      "items": [
+        "Node.js",
+        "Express.js",
+        "NestJS",
+        "TypeORM",
+        "Docker"
+      ]
+    },
+    {
+      "title": "Databases & Tools",
+      "caption": "Storage, versioning, IDE",
+      "items": [
+        "MySQL",
+        "MongoDB",
+        "Git",
+        "GitHub",
+        "VS Code"
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Smart Bengal Hackathon Finalist",
+      "org": "RCCIIT, Kolkata",
+      "detail": "Finalist as part of team Grouplance; contributed backend development using modern web technologies."
+    },
+    {
+      "title": "Status Code 1 Hackathon Finalist",
+      "org": "IISER, Kolkata",
+      "detail": "Finalist for project NeuraMed; built backend infrastructure with Python and contributed to frontend."
+    }
+  ]
+}
