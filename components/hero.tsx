@@ -579,15 +579,15 @@ export function Hero({ person, hero }: { person: Person; hero: HeroData }) {
 														<span className="text-white">
 															:
 														</span>{" "}
-														<div className="inline-flex items-center gap-1">
+														<span className="pl-2 inline-flex items-center align-middle">
 															<img
-																src="/me.png"
+																src="/me.jpeg"
 																alt={
 																	person.name
 																}
-																className="w-5 h-5 rounded-full border border-emerald-400"
+																className="w-14 h-14 rounded-full border border-emerald-400 shadow-sm object-cover"
 															/>
-														</div>
+														</span>
 														<br />
 														<span className="text-yellow-300">
 															{"}"}
