@@ -337,22 +337,7 @@ export function Hero({ person, hero }: { person: Person; hero: HeroData }) {
 								}}
 								className="shadow-lg dark:shadow-emerald-900/20">
 								{/* Terminal-style code window */}
-								<div className="bg-slate-900 rounded-lg border border-slate-700 overflow-hidden">
-									{/* Terminal header */}
-									<div className="flex items-center justify-between px-4 py-2 bg-slate-800 border-b border-slate-700">
-										<div className="flex items-center gap-2">
-											<div className="flex gap-1.5">
-												<div className="w-3 h-3 rounded-full bg-red-500"></div>
-												<div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-												<div className="w-3 h-3 rounded-full bg-green-500"></div>
-											</div>
-											<span className="text-slate-400 text-sm ml-2">
-												developer.js
-											</span>
-										</div>
-									</div>
-									{/* Code content */}
-									<div className="p-4 font-mono text-sm">
+								<CodeWindow title="portfolio" subtitle="developer.js" className="font-mono text-sm">
 										<pre className="text-slate-300 leading-relaxed">
 											<code>
 												<span className="text-purple-400">
@@ -445,8 +430,7 @@ export function Hero({ person, hero }: { person: Person; hero: HeroData }) {
 												</span>
 											</code>
 										</pre>
-									</div>
-								</div>
+								</CodeWindow>
 							</motion.div>
 						</div>
 
@@ -483,22 +467,7 @@ export function Hero({ person, hero }: { person: Person; hero: HeroData }) {
 									}>
 									<div className="shadow-lg dark:shadow-emerald-900/20">
 										{/* Terminal-style code window for mobile */}
-										<div className="bg-slate-900 rounded-lg border border-slate-700 overflow-hidden">
-											{/* Terminal header */}
-											<div className="flex items-center justify-between px-3 py-2 bg-slate-800 border-b border-slate-700">
-												<div className="flex items-center gap-2">
-													<div className="flex gap-1">
-														<div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
-														<div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
-														<div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
-													</div>
-													<span className="text-slate-400 text-xs ml-1">
-														developer.js
-													</span>
-												</div>
-											</div>
-											{/* Code content */}
-											<div className="p-3 font-mono text-xs">
+										<CodeWindow title="portfolio" subtitle="developer.js" className="font-mono text-xs">
 												<pre className="text-slate-300 leading-relaxed">
 													<code>
 														<span className="text-purple-400">
@@ -594,8 +563,7 @@ export function Hero({ person, hero }: { person: Person; hero: HeroData }) {
 														</span>
 													</code>
 												</pre>
-											</div>
-										</div>
+										</CodeWindow>
 									</div>
 								</CollapsibleContent>
 							</Collapsible>

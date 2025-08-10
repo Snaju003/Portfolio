@@ -13,6 +13,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { TerminalOverlay } from "@/components/terminal-overlay";
 import { Loader } from "@/components/loader";
 import { AnimatedContentWrapper } from "@/components/animated-content-wrapper";
+import { ScrollToTop } from "@/components/scroll-to-top";
 
 type Data = {
 	brand: string;
@@ -130,12 +131,20 @@ export default function Page() {
 						id="contact"
 						className="scroll-mt-24 py-12 md:py-16">
 						<div className="container max-w-6xl mx-auto px-4">
+							<h2 className="text-3xl font-bold tracking-tight mb-4">
+								Get in Touch
+								<span className="ml-1 text-emerald-600 dark:text-emerald-400">_</span>
+							</h2>
+							<p className="text-muted-foreground mb-8">
+								Have a project in mind or want to discuss an opportunity? I'm always open to new ideas and collaborations.
+							</p>
 							<ContactCard person={data.person} />
 						</div>
 					</section>
 				</div>
 				<Footer />
 				<TerminalOverlay person={data.person} />
+				<ScrollToTop />
 			</main>
 		</AnimatedContentWrapper>
 	);

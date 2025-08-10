@@ -22,6 +22,14 @@ export const metadata: Metadata = {
 	],
 	authors: [{ name: "Soumya Raj Sarkar" }],
 	creator: "Soumya Raj Sarkar",
+	icons: {
+		icon: [
+			{ url: '/favicon.svg', type: 'image/svg+xml' },
+		],
+		apple: [
+			{ url: '/logo.svg' },
+		],
+	},
 };
 
 export default function RootLayout({
