@@ -444,7 +444,6 @@ export function SiteHeader({
 											Download Resume
 										</a>
 									</Button>
-
 								</div>
 							</SheetContent>
 						</Sheet>
@@ -500,7 +499,7 @@ export function SiteHeader({
 														}
 														className={cn(
 															navigationMenuTriggerStyle(),
-															"font-mono transition-all duration-200 flex items-center gap-2 outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background text-sm lg:text-base px-3 py-2",
+															" font-mono transition-all duration-200 flex items-center  outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background text-sm lg:text-base px-3 py-2 pb-3",
 															isActive &&
 																"bg-emerald-600/10 text-emerald-700 dark:text-emerald-300"
 														)}>
@@ -508,7 +507,7 @@ export function SiteHeader({
 															href={item.href}
 															label={item.label}
 														/>
-														<span className="hidden lg:inline">
+														<span className="hidden pb-2 lg:inline">
 															{item.label}
 														</span>
 														<span className="lg:hidden">
@@ -517,13 +516,6 @@ export function SiteHeader({
 																3
 															)}
 														</span>
-														{isActive && (
-															<span
-																className="text-[10px] font-mono text-muted-foreground"
-																aria-hidden>
-																{pct}%
-															</span>
-														)}
 													</NavigationMenuLink>
 												</Link>
 											</NavigationMenuItem>
