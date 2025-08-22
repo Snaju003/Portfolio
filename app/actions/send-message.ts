@@ -2,13 +2,11 @@
 
 import nodemailer from "nodemailer";
 
-// Create a transporter object
 const transporter = nodemailer.createTransport({
-	service: "gmail", // You can use other services like 'outlook', 'yahoo', etc.
+	service: "gmail",
 	auth: {
-		// These should ideally come from environment variables
 		user: process.env.EMAIL_USER || "your-email@gmail.com",
-		pass: process.env.EMAIL_PASSWORD || "your-app-password", // Use app password for Gmail
+		pass: process.env.EMAIL_PASSWORD || "your-app-password",
 	},
 });
 
@@ -22,7 +20,6 @@ export async function sendMessage(prevState: any, formData: FormData) {
 	}
 
 	try {
-		// Email validation using simple regex
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 		if (!emailRegex.test(email)) {
 			return {
@@ -31,10 +28,9 @@ export async function sendMessage(prevState: any, formData: FormData) {
 			};
 		}
 
-		// Define the email options
 		const mailOptions = {
 			from: email,
-			to: process.env.RECIPIENT_EMAIL || "soumyaraj2003@gmail.com", // Your email from data.json
+			to: process.env.RECIPIENT_EMAIL || "soumyaraj2003@gmail.com",
 			subject: `Portfolio Contact: Message from ${name}`,
 			text: message,
 			html: `
@@ -46,7 +42,6 @@ export async function sendMessage(prevState: any, formData: FormData) {
       `,
 		};
 
-		// Send the email
 		await transporter.sendMail(mailOptions);
 		console.log("[Contact] Message sent successfully from:", {
 			name,
